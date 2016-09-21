@@ -1,0 +1,696 @@
+/* ==========================================================================
+   WELCOME TO DARK BLUE
+============================================================================= */
+
+html, button, input, select, textarea {color: #222}
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {overflow-x:hidden;}
+html {font-size: 1em; line-height: 1.4;}
+html, body {margin:0;padding:0;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif}
+.clearfix:before,.clearfix:after {content: " "; /* 1 */display: table; /* 2 */}
+.clearfix:after {clear: both;}
+/* For IE 6/7 only - Include this rule to trigger hasLayout and contain floats. */
+.clearfix {*zoom: 1;}
+/* Remove the gap between images, videos, audio and canvas and the bottom of their containers: h5bp.com/i/440 */
+audio, canvas, img, video {vertical-align: middle;}
+/* Remove default fieldset styles */
+fieldset {border: 0; margin: 0; padding: 0;}
+ul {list-style:none}
+/* Allow only vertical resizing of textareas. */
+textarea {resize: vertical;}
+ul, li, p, h1, h2, h3, h4, h5, h6 {padding:0;margin:0;font-weight:normal;}
+li {list-style:none}
+a {text-decoration:none}
+img {max-width:100%}
+a img {border:none}
+*, *:after, *:before {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.overflow-hidden {overflow: hidden;}
+blockquote {margin: 0; padding: 0;}
+p {text-align:left}
+
+
+
+
+/* ==========================================================================
+   Typography
+============================================================================= */
+
+h1,h2,h3,h4,h5,h6,p,li {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 5rem;
+    text-transform:none;
+    text-transform:uppercase;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 2.5rem;
+    text-transform:none;
+    line-height:1.3;
+    text-transform:uppercase;
+}
+
+h3, h4 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 0px;
+    text-transform:none;
+    line-height: 1.6;
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+.btn {
+    background-color: #eb6e1f;
+    border-radius: 2px;
+    padding:12px 30px;
+    font-size: 0.8rem;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#fff;
+    transition:all ease 0.3s
+}
+
+
+
+/* ==========================================================================
+   Global Elements
+   ========================================================================== */
+
+.embed-container { 
+	position: relative; 
+	padding-bottom: 56.25%; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%; 
+} 
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+}
+
+.header {
+	z-index:99999;
+	position: absolute;
+	width: 100%;
+	top: 0;
+}
+
+.microsite-nav li a {
+	color:#fff
+}
+
+.main {
+	position:absolute;
+	width: 100%;
+	z-index: 500;
+}
+
+.page-content {
+	background-color: rgba(250, 250, 250, 1);
+	padding: 50px;
+	margin-bottom: 50px;
+	width: 100%;
+	margin: auto;
+}
+
+.page-head {
+	height:100vh;
+	display:table;
+	width:100%;
+	padding-top: 127px;
+	position: relative;
+}
+
+.page-head-cell {
+	height:100%;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.page-head-text {
+	text-align: left;
+	width: 960px;
+	margin:auto;
+}
+
+@media (max-width:980px) {
+	.page-head-text {
+		width: 90%;
+	}
+}
+
+.page-head h1,
+.page-head h2 {
+	color:#fff
+}
+
+.page-head h1 {
+	width:auto;
+	font-size: 5rem;
+	text-shadow: 0px 0px 40px rgba(0, 0, 0, 1);
+	/* background-color: #000; */
+	margin: 0px 0;
+	padding: 0px 18px;
+	float: left;
+	clear: both;
+}
+
+@media (max-width:550px) {
+	.page-head h1 {
+		font-size: 3rem;
+	}
+}
+
+@media (max-width:400px) {
+	.page-head h1 {
+		font-size: 2.6rem;
+	}
+}
+
+.page-head h1 span {
+	background-color:#000;
+	display:block;
+	padding:5px 30px;
+	margin-bottom:10px
+}
+
+.page-head p {
+	font-weight: 600;
+	display:inline-block;
+	padding: 9px 21px;
+	margin-bottom:10px;
+	clear:both;
+	color:#fff;
+	font-size:1.2rem;
+	text-shadow: 0px 0px 40px rgba(0, 0, 0, 1);
+}
+
+.intro p {
+	font-size:1.2rem;
+	font-weight:400;
+	text-align:center;
+	width:740px;
+	margin:auto;
+	line-height:1.6;
+	margin-top:30px;
+}
+
+@media (max-width:960px) {
+	.intro p {
+		width:90%;
+	}
+}
+
+@media (max-width:700px) {
+	.intro p {
+		width:95%;
+	}
+}
+
+.intro {
+	margin-bottom: 100px;
+}
+
+.scroll-arrow {
+	position:absolute;
+	bottom: 50%;
+	width: 140px;
+	height: 140px;
+	background-color:#da202c;
+	z-index: 9990;
+	left: 50%;
+	margin-left: -30px;
+	border-radius: 100px;
+}
+
+.scroll-arrow img {
+	width:30px;
+	margin:22px 15px 0
+}
+
+
+/* ==========================================================================
+   Backgrounds
+   ========================================================================== */
+
+
+.container-bg {
+	 height:100%;
+	 width:100%;
+	 position:fixed;
+	 top: 0;
+}
+
+.overview-bg {
+	background: url(../images/bg-overview.jpg) no-repeat left top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.kunst-kultur-bg {
+	background: url(../images/bg-kunst-kultur.jpg) no-repeat left top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.gourmet-bg {
+	background: url(../images/bg-gourmet.jpg) no-repeat left top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.events-bg {
+	background: url(../images/bg-events.jpg) no-repeat left top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.angebote-bg {
+	background: url(../images/bg-angebote.jpg) no-repeat left top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+/* ==========================================================================
+   (Global) Layout & Structure
+   ========================================================================== */
+
+
+.img-grid {
+    text-align: left;
+}
+
+.img-grid div {
+    width:47.5%;
+    float:left;
+    margin-bottom: 60px;
+    overflow:hidden;
+    border-top:1px solid #eee;
+    position:relative;
+}
+
+.img-grid div:nth-child(odd) {
+    margin-right:5%
+}
+
+@media (max-width:749px) {
+    .img-grid div {
+        width:100%;
+        margin-right:0;
+        margin-bottom:20px
+    }
+}
+
+.img-grid div img {
+    transform: scale(1);
+    opacity: 1;
+    transition: all ease-in-out 0.3s;
+}
+    .img-grid div:hover img {
+        transform: scale(1.035); 
+        opacity:0.8
+    }
+
+
+
+.img-grid div a h3 {
+    transition: all ease 0.3s;
+    margin-bottom:20px;
+    padding-top: 27px;
+    line-height:1.4;
+}
+
+.img-grid div a h3 span {
+	display:block;
+	font-weight:300
+}
+
+.img-grid div p {
+    margin-top:20px;
+    text-align:left
+}
+
+
+
+.page-offers {
+	width:960px;
+	margin:50px auto
+}
+
+.overview-intro-text {
+	margin: 60px 0 30px;
+}
+
+.overview-intro-text img {
+	margin-bottom:20px;
+	width:360px
+}
+
+.offers-cta {
+	margin-bottom:35px;
+	background-color: rgba(250, 250, 250, 0.93);
+	position: relative;
+}
+
+.offers-cta img {
+	opacity:1
+	transition:ease opacity 0.3s
+}
+
+.offers-cta img:hover {
+	opacity:0.85
+	
+}
+
+#page-content h2 {
+	text-align:center;
+	text-transform:none ;
+	font-size:2rem;
+	margin-bottom:30px
+}
+
+.content-cols {
+	margin:35px 0;
+}
+
+.content-col {
+	float:left;
+	width: 47.5%;
+	margin-right:5%;
+}
+		
+
+#food #page-content {border-top:10px solid #c11f7b;}
+#retox #page-content {border-top:10px solid #1db1dc;}
+#beaches #page-content {border-top:10px solid #19285c;}
+#adventure #page-content {border-top:10px solid #22a64c;}
+#romance #page-content {border-top:10px solid #d62631;}
+#family #page-content {border-top:10px solid #c6d444;}
+#offers #page-content {border-top:10px solid #c11f7b;padding: 50px 50px 20px 50px;}
+
+#food #page-content h2 {color: #c11f7b;}
+#retox #page-content h2 {color:#1db1dc;}
+#beaches #page-content h2 {color:#19285c;}
+#adventure #page-content h2 {color:#22a64c;}
+#romance #page-content h2 {color:#d62631;}
+#family #page-content h2 {color:#c6d444;}
+#offers #page-content h2 {color:#c11f7b;}
+
+footer {
+	width:100%;
+	padding:50px 0;
+	color:#fff;
+	text-align:center;
+	background: rgba(0, 0, 0, 0.7); 
+	font-weight:600
+}
+
+/*============ Overview Styles ============*/
+
+#overview .grid-item h3 {
+	text-align:left;
+	background-color: #000;
+	padding: 18px 30px;
+	color:#fff;
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+	font-size: 1rem;
+	transition:ease all 0.3s;
+	margin: 0 5%;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 3px;
+}
+
+#overview .grid-item:hover h3 {
+	padding: 18px 30px 30px;
+	background-color:#da202c
+}
+
+#overview #page-content h2 {
+	font-size: 1.4rem;
+}
+
+#overview .page-content {
+	padding: 100px 10% 70px;
+}
+
+
+
+
+/* ==========================================================================
+   Content Pages
+   ========================================================================== */
+
+.products img {
+	float:left;
+	width:50%
+}
+
+.page-content-head {
+	float: left;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 50px;
+	padding-bottom: 10px;
+}
+
+.location-box {
+	float: left;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+}
+
+.location-box-img {
+	width:45%;
+	float:left;
+	margin-right:10%
+}
+
+.location-box-text {
+	width:45%;
+	float:left
+}
+
+.location-box-text p {
+	font-size:0.85rem;
+	margin-bottom:10px
+}
+
+.location-box-text p.flight-price {
+	color:#2a7fce;
+	font-weight:600;
+	margin-bottom:22px;
+	background: url(../images/plane-icon-blue.svg) no-repeat;
+	padding-left: 24px;
+	background-size: 17px;
+	background-position-y: 9px;
+}
+
+.location-box-text p span {
+	font-size:1.3rem
+}
+
+.ba-super-leader {
+	border-bottom: none;
+	padding-bottom:0;
+	margin-bottom:60px
+}
+
+
+
+/* ==========================================================================
+   Offers
+   ========================================================================== */
+
+
+#offers .page-content-head {
+	border-bottom: none;
+	margin-bottom: 0px;
+	/* padding-bottom: 30px; */
+}
+
+.page-offers li {
+	float:left;
+	width: 100%;
+	margin-bottom:44px;
+	position:relative
+;
+	background: #fff;
+}
+
+
+.page-offers h2 {
+	color: #fff;
+	margin-bottom: 30px;
+	font-weight: 300;
+	background: #c11f7b;
+	padding: 17px 24px;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.se-offer-copy {
+	background:#fff;
+	padding: 22px 0;
+	width: 50%;
+	float: left;
+}
+
+.se-offer-copy p {
+	font-size: 0.85rem;
+	margin-bottom: 0;
+	padding: 0 22px;
+}
+
+.se-offer-img {
+	background:#fff;
+	position:relative
+;
+	width: 50%;
+	float: left;
+}
+
+.se-offer-img img {
+	opacity:1;
+	transition:opacity ease 0.3s;
+}
+
+.se-offer-img img:hover {
+	opacity:0.66;
+}
+
+.se-offer-location {
+	font-weight: 400;
+	font-style:normal;
+	font-size: 0.85rem !important;
+	background:url(../images/location-icon.svg) no-repeat;
+	background-size: 13px;
+	padding-left: 21px;
+	margin: 4px 0 10px 22px !important;
+	color: #c11f7b;
+	background-position-y: 3px;
+	text-transform: uppercase;
+	letter-spacing: 1.4px;
+	/* margin-left: 22px; */
+}
+
+.se-offer-price {
+	background: #c11f7b;
+	/* padding: 10px 26px 18px 26px; */
+	-webkit-box-shadow: inset 0px 10px 9px -8px rgba(0,0,0,0.3);
+	-moz-box-shadow: inset 0px 10px 9px -8px rgba(0,0,0,0.3);
+	box-shadow: inset 0px 10px 9px -8px rgba(0,0,0,0.3);
+	float: left;
+	width: 50%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.se-offer-price p {
+	color:#fff
+;
+	margin-bottom: -2px;
+	padding: 15px 0px 20px 22px;
+}
+
+.se-offer-price .now-price {
+	font-weight: 500;
+	font-size:1.2rem;
+	font-style:normal
+}
+
+.se-offer-price .was-price {
+	text-decoration:line-through
+}
+
+.remaining-offer-time {
+	font-weight: 400;
+	font-size:0.8rem;
+	font-style:normal;
+	margin-top:3px
+}
+
+.offer-btn {
+	position:absolute;
+	top: 18px;
+	right: 10px;
+	-webkit-box-shadow:  0px 10px 9px -8px rgba(0,0,0,0.3);
+	-moz-box-shadow:  0px 10px 9px -8px rgba(0,0,0,0.3);
+	box-shadow:  0px 10px 9px -8px rgba(0,0,0,0.3);
+	padding: 0;
+}
+
+.offer-btn .button {
+	background-color: #fff;
+	color:#bb261a;
+	padding: 11px 11px;}
+
+.offer-btn .button:hover {
+	background-color: #f27789 ;
+	color:#fff;
+
+}
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+#page-footer {
+	color:#fff;
+	margin:20px 0 70px;
+	position:relative;
+}
+
+
+#page-footer ul {
+	position:absolute;
+	right:0px;
+	top:-10px
+}
+
+
+#page-footer li {
+	width: 60px !important;
+	float: none !important;
+	display:inline-block;
+	margin-left:15px
+}
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
